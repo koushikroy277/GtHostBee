@@ -1,0 +1,27 @@
+@import "~bootstrap/scss/bootstrap";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --navFont: #fff;
+    --fontColor: #062057;
+    --navTheme: #062057;
+    --navTheme2: #0c73c7;
+}
+
+.parent{
+    .element{
+        height: 100vh;
+    }
+}
+
+.bgLex{
+    background-image: url("../images/bgLex.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
