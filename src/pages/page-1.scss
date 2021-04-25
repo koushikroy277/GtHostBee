@@ -4,24 +4,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 :root{
     --navFont: #fff;
     --fontColor: #062057;
-    --navTheme: #062057;
-    --navTheme2: #0c73c7;
+    --navTheme: rgba(3, 30, 69, .9);
+    --bodyTheme: #020e21;
+    --themeColor: #00ecfc;
+    --cardBg: #152b4d;
+    --cardColor: #0e152e;
+    --secondColor: rgb(0, 204, 255);
+    --secondBG: hsl(217, 87%, 3%);
+    --secondCard: hsl(218, 89%, 11%);
 }
 
 .parent{
-    .element{
-        height: 100vh;
-    }
-}
-
-.bgLex{
-    background-image: url("../images/bgLex.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }

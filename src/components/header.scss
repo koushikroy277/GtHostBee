@@ -1,9 +1,9 @@
-@mixin navHead($bg, $bg2) {
+@mixin navHead($bg) {
   .Nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-image: linear-gradient($bg, $bg2);
+    background-color: $bg;
     position: fixed;
     height: 70px;
     z-index: 100;
@@ -11,7 +11,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    transition: .6s;
+    transition: 0.6s;
 
     .logo {
       margin-top: 10px;
@@ -33,30 +33,79 @@
         text-decoration: none;
         cursor: pointer;
         color: var(--navFont);
-        padding: 20px 15px;
+        padding: 5px;
+        margin: 10px;
         font-size: 20px;
         font-weight: 600;
-        transition: 0.3s;
 
         &:hover {
-          background-color: #fff;
-          color: var(--fontColor);
+          border-bottom: 3px solid var(--themeColor);
         }
       }
 
-      .active{
-        background-color: #fff;
-        color: var(--fontColor);
-        transition: all 1s ease;
+      .active {
+        border-bottom: 3px solid var(--themeColor);
       }
     }
   }
 }
 
-.navParent{
-  @include navHead(transparent, transparent);
+.navParent {
+  @include navHead(transparent);
 }
 
-.navParent.show{
-  @include navHead(var(--navTheme), var(--navTheme2));
+.navParent.show {
+  @include navHead(var(--navTheme));
+}
+
+.drawer {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .drawer {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    .drawerBtn {
+      color: #fff;
+      position: fixed;
+      top: 10px;
+      right: 20px;
+    }
+  }
+  .sideBarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bodyTheme);
+    width: 300px;
+    height: 100%;
+    padding-top: 100px;
+    z-index: 100;
+
+    .link {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      font-size: 22px;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 3px solid var(--themeColor);
+      }
+    }
+  }
+
+  .navParent,
+  .navParent.show {
+    .Nav {
+      .linkContainer {
+        display: none;
+      }
+    }
+  }
 }

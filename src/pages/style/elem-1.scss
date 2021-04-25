@@ -1,7 +1,11 @@
 .elemCarousel{
-    position: relative;
-
     .elemItem{
+        height: 100vh;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
         .elemCaption{
             display: flex;
             flex-direction: column;
@@ -13,8 +17,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 100vh;
             width: 100%;
+            height: 100%;
         }
     }
 }

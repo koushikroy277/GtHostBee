@@ -1,0 +1,71 @@
+.contact {
+  background-image: url('../../images/server5.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .contactBg {
+    background-color: rgba($color: #000000, $alpha: .65);
+    padding-bottom: 100px;
+    color: #fff;
+
+    .contactHead {
+      text-align: center;
+      padding: 50px 0;
+
+      hr {
+        background-color: var(--themeColor);
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+        height: 4px;
+      }
+
+      h1{
+        font-size: 3.5rem;
+      }
+    }
+    .contactBody {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      align-content: center;
+      justify-items: center;
+      grid-gap: 20px;
+
+      .sendContact {
+        input{
+          width: 100%;
+          outline: none;
+          background: none;
+          border: 1px solid #ffffff6d;
+          font-weight: 700;
+          font-size: 20px;
+          color: #fff;
+          padding: 10px 15px;
+          margin: 5px 15px;
+        }
+        #msg{
+          padding-bottom: 100px;
+        }
+      }
+      .knowContact {
+        .knowSec {
+          display: flex;
+          align-items: center;
+          border: 1px solid #ffffff4b;
+          margin: 10px;
+          padding: 5px 10px;
+
+          h1{
+            font-size: 22px;
+            padding: 0 10px;
+          }
+
+          .icon{
+            color: var(--secondColor);
+          }
+        }
+      }
+    }
+  }
+}

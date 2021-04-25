@@ -4,11 +4,13 @@ import PropTypes from "prop-types"
 import { Link, animateScroll as Scroll } from "react-scroll"
 import { BiSearchAlt } from "react-icons/bi"
 
+import SideBar from "./drawer"
 
 const Header = () => {
   const [bg, setBg] = React.useState(false);
-  const scrollDur = 700;
-
+  const scrollDur = 500;
+  const delayDur = 50;
+  
   const handleScroll = () => {
     if (window.scrollY >= 100) {
       setBg(true)
@@ -36,6 +38,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={scrollDur}
+              delay={delayDur}
             >
               Home
             </Link>
@@ -46,6 +49,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={scrollDur}
+              delay={delayDur}
             >
               About Us
             </Link>
@@ -56,6 +60,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={scrollDur}
+              delay={delayDur}
             >
               Pricing
             </Link>
@@ -66,6 +71,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={scrollDur}
+              delay={delayDur}
             >
               Services
             </Link>
@@ -76,11 +82,26 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={scrollDur}
+              delay={delayDur}
+            >
+              Reviews
+            </Link>
+            <Link
+              activeClass="active"
+              className="link"
+              to="page6"
+              spy={true}
+              smooth={true}
+              duration={scrollDur}
+              delay={delayDur}
             >
               Contact
             </Link>
           </div>
         </div>
+      </div>
+      <div className="drawer">
+        <SideBar />
       </div>
     </header>
   )

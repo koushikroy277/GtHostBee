@@ -8,6 +8,7 @@ import Elem2 from "./elem/elem-2"
 import Elem3 from "./elem/elem-3"
 import Elem4 from "./elem/elem-4"
 import Elem5 from "./elem/elem-5"
+import Elem6 from "./elem/elem-6"
 
 const FirstPage = () => (
   <>
@@ -32,6 +33,10 @@ const FirstPage = () => (
 
         <Element name="page5" className="element">
           <Elem5 />
+        </Element>
+
+        <Element name="page6" className="element">
+          <Elem6 />
         </Element>
       </div>
     </div>
